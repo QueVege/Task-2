@@ -6,7 +6,7 @@ from curves import *
 def show_message():
     messagebox.showinfo("TypeError", "Please enter a valid iteration number")
 
-def _set():
+def curve_type():
     
     draw.reset()
     draw.speed('fastest')
@@ -51,9 +51,8 @@ Label(root,text='Iteration\nnumber:').grid(row=0,column=1, padx=5, pady=5,sticky
 Entry= Entry(root, width=5, font='Arial 10')
 Entry.grid(row=1, column=1, padx=10, pady=5, sticky="e")
 
-but = Button(root, width=5, text='Go', command=_set)
+but = Button(root, width=5, text='Go', command=curve_type)
 but.grid(row=3, column=1, padx=10, pady=5, sticky="e")
 
 screen.exitonclick()
-
 root.mainloop()
