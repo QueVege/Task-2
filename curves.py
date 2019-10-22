@@ -35,8 +35,6 @@ def peano_curve(_, direction, r):
     peano_curve(_, not direction, r-1)
     _.forward(STEP)
     peano_curve(_, direction, r-1) 
-    
-#################################
     	
 def hilbert_curve(_, direction, r):
 
@@ -66,8 +64,6 @@ def hilbert_curve(_, direction, r):
     hilbert_curve(_, not direction, r-1)
     _.left(angle)
 
-#################################
-
 def gosper_curve(_, direction, r):
     
     if r < 1:
@@ -77,7 +73,6 @@ def gosper_curve(_, direction, r):
     angle = 60
     
     if direction:
-
         gosper_curve(_, direction, r-1)     
         _.left(angle)
         gosper_curve(_, not direction, r-1)     
@@ -110,4 +105,3 @@ def gosper_curve(_, direction, r):
         gosper_curve(_, not direction, r-1)
         _.right(angle)
         gosper_curve(_, direction, r-1)
-
